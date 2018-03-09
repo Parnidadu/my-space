@@ -1,0 +1,46 @@
+//this program is intended to find out answer:
+//Winter has finally come to Chefland, so Chef bought a glove for herself. Chef has a hand with N fingers (for the sake of simplicity, let us consider the thumb a finger too) numbered 1 through N and the glove has N sheaths numbered 1 through N. Exactly one finger has to be inserted into each sheath. You are given the lengths of Chef's fingers, as seen from left to right. You are also given the lengths of the sheaths of the glove, from left to right, as seen from the front.//
+
+//author:pranav mishra
+
+#include<stdio.h>
+void main()
+	{
+	int n;
+	//enter the no. of test cases
+	scanf("%d",&n);
+	while(n--){
+	int h[9999],g[9999],f1=1,f2=1,r[9999],i,f;
+	//taking no. of finger to be tested
+	scanf("%d",&f);
+	for(i=0;i<f;i++)
+	scanf("%d",&h[i]);//taking the measurement of fingers
+	for(i=0;i<f;i++)
+	scanf("%d",&g[i]);//taking the measurement of glove
+	for(i=0;i<f;i++){
+			r[i]=g[i]-h[i];
+			if(r[i]<0){
+			f1=0;
+			break;
+				}
+			}
+	for(i=0;i<f;i++){
+			r[i]=g[i]-h[f-i-1];
+			if(r[i]<0){
+			f2=0;
+			break;
+				}
+	
+				}		
+	if(f1==1 && f2==1)
+	printf("both\n");
+	if(f1==1 && f2==0)
+	printf("front\n");
+	if(f1==0 && f2==1)
+	printf("back\n");
+	if(f1==0 && f2==0)
+	printf("none\n");
+
+		}
+	
+	}
