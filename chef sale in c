@@ -1,0 +1,29 @@
+//It's Chef's birthday month and so she has decided to organize a big sale in which grand discounts will be provided.//
+
+//In this sale, suppose a recipe should have a discount of x percent and its original price (before the sale) is p. Statistics says that when people see a discount offered over a product, they are more likely to buy it. Therefore, Chef decides to first increase the price of this recipe by x% (from p) and then offer a discount of x% to people.//
+
+//author: pranav mishra
+//date :08/03/18
+
+#include<stdio.h>
+void main()
+	{
+	int n;
+	//taking no. of test cases
+	scanf("%d",&n);
+	while(n--){
+	int rcp,q,i;
+	float p,d,l,x,sum=0;
+	//enter recipe no.
+	scanf("%d",&rcp);
+	for(i=0;i<rcp;i++){
+	scanf("%f%d%f",&p,&q,&d);
+	x=p;
+	p=p+(d/100)*p;
+	p=p-(d/100)*p;
+	l=q*(x-p);
+	sum=sum+l;
+	}
+	printf("%f\n",sum);		
+		}
+	}
