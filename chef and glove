@@ -10,7 +10,7 @@ void main()
 	//enter the no. of test cases
 	scanf("%d",&n);
 	while(n--){
-	int h[9999],g[9999],f1=1,f2=1,r[9999],i,f;
+	int h[100000],g[100000],f1=1,f2=1,r[100000],i,f;
 	//taking no. of finger to be tested
 	scanf("%d",&f);
 	for(i=0;i<f;i++)
