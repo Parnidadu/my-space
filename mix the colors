@@ -17,6 +17,7 @@ void main(){
 	scanf("%d",&n);
 	//taking the  first color
 	while(n--){
+		x=0;
 		//taking the no. of colors
 		int t,c[100000],i,j;
 		scanf("%d",&t);
